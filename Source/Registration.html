@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"
+            type="application/javascript"></script>
+    <link href='http://fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
+
+    <title>Registration</title>
+    <script>
+        function Reg()
+        {
+            if(document.getElementById('name').value.length>0  && document.getElementById('email').value.length>0
+                && document.getElementById('username').value.length>0 &&
+                document.getElementById('pwd').value.length>0 &&
+                document.getElementById('cpwd').value.length>0 &&
+                ( document.getElementById('cpwd').value ==document.getElementById('pwd').value))
+            {
+                localStorage.setItem('username',(document.getElementById('username').value));
+                localStorage.setItem('pwd',(document.getElementById('pwd').value));
+                window.location.href='login.html';
+            }
+            else
+            {
+                alert('Missing information !');
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-image: url("1.jpg");
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
+
+</head>
+<body>
+<center>
+    <form class="form-horizontal" style="color: black ; font-size: xx-large ;font-family: Acme ; text-shadow: 2px 2px white" >
+
+
+        <fieldset>
+
+            <!-- Form Name -->
+
+            <legend><h1 ><b>Registration Form</b></h1></legend>
+
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="name" style="color: black ; font-size: xx-large;font-family: Acme ; text-shadow: 2px 2px white">Name</label>
+                <div class="col-md-4">
+                    <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md" required="">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="email" style="color: black ; font-size: xx-large;font-family: Acme ; text-shadow: 2px 2px white">Email</label>
+                <div class="col-md-4">
+                    <input id="email" name="email" type="email" placeholder="Email ID" class="form-control input-md" required="">
+
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="username" style="color: black ; font-size: xx-large;font-family: Acme ; text-shadow: 2px 2px white">Username</label>
+                <div class="col-md-4">
+                    <input id="username" name="username" type="text" placeholder="Username" class="form-control input-md" required="">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="password" style="color: black ; font-size: xx-large;font-family: Acme ; text-shadow: 2px 2px white">Password</label>
+                <div class="col-md-4">
+                    <input id="pwd" name="password" type="password" placeholder="Password" class="form-control input-md" required="">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="confirm password" style="color: black ; font-size: xx-large;font-family: Acme ; text-shadow: 2px 2px white">Confirm-password</label>
+                <div class="col-md-4">
+                    <input id="cpwd" name="confirm password" type="password" placeholder="Confirm Password" class="form-control input-md" required="">
+
+                </div>
+            </div>
+
+            <input type="button" id="Submit" value="Submit" align="center" onclick="Reg()">
+
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+</html>
